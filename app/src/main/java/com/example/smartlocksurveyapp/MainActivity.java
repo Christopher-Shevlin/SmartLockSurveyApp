@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private static void openDrawer(DrawerLayout drawerLayout) {
+    public static void openDrawer(DrawerLayout drawerLayout) {
 
         drawerLayout.openDrawer(GravityCompat.START);
     }
@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private static void closeDrawer(DrawerLayout drawerLayout) {
+    public static void closeDrawer(DrawerLayout drawerLayout) {
         if (drawerLayout.isDrawerOpen(GravityCompat.START)){
             drawerLayout.closeDrawer(GravityCompat.START);
         }
@@ -60,13 +60,15 @@ public void ClickVideoWalkThrough (View view){
         redirectActivity(this, VideoWalkthrough.class);
 }
 public void ClickFloorPlans (View view){
+
         redirectActivity(this, FloorPlans.class);
 }
 public void ClickLogout (View view){
+
         logout(this);
 }
 
-private static void logout(final Activity activity){
+public static void logout(final Activity activity){
     AlertDialog.Builder builder = new AlertDialog.Builder(activity);
     builder.setTitle("Logout");
     builder.setMessage("Confirm");
@@ -89,7 +91,7 @@ builder.show();
 }
 
 
-private static void redirectActivity(Activity activity, Class aClass){
+public static void redirectActivity(Activity activity, Class aClass){
     Intent intent = new Intent(activity, aClass);
     intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
     activity.startActivity(intent);
