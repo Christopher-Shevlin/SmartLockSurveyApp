@@ -48,16 +48,19 @@ public class MainActivity extends AppCompatActivity {
 
     }
 public void ClickNewSurvey (View view){
-        redirectActivity(this,);
+
+        redirectActivity(this, NewSurvey.class);
 }
 public void ClickHistoricalSurveys (View view){
-        redirectActivity(this,);
+
+        redirectActivity(this, HistoricalSurveys.class);
 }
 public void ClickVideoWalkThrough (View view){
-        redirectActivity(this,);
+
+        redirectActivity(this, VideoWalkthrough.class);
 }
 public void ClickFloorPlans (View view){
-        redirectActivity(this,);
+        redirectActivity(this, FloorPlans.class);
 }
 public void ClickLogout (View view){
         logout(this);
